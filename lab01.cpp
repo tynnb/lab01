@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "include/function.h"
-//#include "src/function.cpp"
 
 int main() {
     std::string text;
