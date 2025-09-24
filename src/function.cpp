@@ -1,7 +1,6 @@
 #include "../include/function.h"
-#include <string>
 
-std::string function(std::string& text, int n, char old_value, char new_value) {
+std::string function(std::string& text, int n, char oldv, char newv) {
     if (n < 1 || n > text.length()) {
         return text;
     }
@@ -9,10 +8,10 @@ std::string function(std::string& text, int n, char old_value, char new_value) {
     int k = 0;
 
     for (int i = 0; i < text.length(); i++) {
-        if (text[i] == old_value) {
+        if (text[i] == oldv) {
             k++;
             if (k == n) {
-                text[i] = new_value;
+                text[i] = newv;
                 k = 0;
             }
         }

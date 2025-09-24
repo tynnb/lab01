@@ -4,65 +4,55 @@
 
 TEST(test_01, basic_test_set) {
     std::string text = "hello";
-    std::string result = function(text, 1, 'l', 'x');
-    ASSERT_TRUE(result == "hexxo");
+    ASSERT_TRUE(function(text, 1, 'l', 'x') == "hexxo");
 }
 
 TEST(test_02, basic_test_set) {
-    std::string text = "hello world";
-    std::string result = function(text, 2, 'l', 'x');
-    ASSERT_TRUE(result == "helxo world");
+    std::string text = "lol lol lol";
+    ASSERT_TRUE(function(text, 2, 'l', 'x') == "lox lox lox");
 }
 
 TEST(test_03, basic_test_set) {
-    std::string text = "hello";
-    std::string result = function(text, 10, 'l', 'x');
-    ASSERT_TRUE(result == "hello");
+    std::string text = "";
+    ASSERT_TRUE(function(text, 1, 'a', 'b') == "");
 }
 
 TEST(test_04, basic_test_set) {
-    std::string text = "test";
-    std::string result = function(text, 1, 't', 'T');
-    ASSERT_TRUE(result == "TesT");
+    std::string text = "sokolniki";
+    ASSERT_TRUE(function(text, 15, 'l', 'x') == "sokolniki");
 }
 
 TEST(test_05, basic_test_set) {
-    std::string text = "aaa";
-    std::string result = function(text, 3, 'a', 'b');
-    ASSERT_TRUE(result == "aab");
+    std::string text = "fiin";
+    ASSERT_TRUE(function(text, 1, 'i', 'e') == "feen");
 }
 
 TEST(test_06, basic_test_set) {
-    std::string text = "abc";
-    std::string result = function(text, 0, 'a', 'x');
-    ASSERT_TRUE(result == "abc");
+    std::string text = "zapad rabotaet v shtatnom rezhime";
+    ASSERT_TRUE(function(text, 0, 'z', 'Z') == "zapad rabotaet v shtatnom rezhime");
 }
 
 TEST(test_07, basic_test_set) {
-    std::string text = "hi";
-    std::string result = function(text, 5, 'h', 'x');
-    ASSERT_TRUE(result == "hi");
+    std::string text = "bolshe 0.7 nelzya";
+    ASSERT_TRUE(function(text, 1, '7', '5') == "bolshe 0.5 nelzya");
 }
 
 TEST(test_08, basic_test_set) {
-    std::string text = "hello";
-    std::string result = function(text, 1, 'z', 'x');
-    ASSERT_TRUE(result == "hello");
+    std::string text = "na kpp";
+    ASSERT_TRUE(function(text, 3, 'p', 't') == "na kpp");
 }
 
 TEST(test_09, basic_test_set) {
-    std::string text = "lol lol lol";
-    std::string result = function(text, 2, 'l', 'x');
-    ASSERT_TRUE(result == "lox lox lox");
+    std::string text = "Tynb";
+    ASSERT_TRUE(function(text, 1, 'T', 't') == "tynb");
 }
 
 TEST(test_10, basic_test_set) {
-    std::string text = "";
-    std::string result = function(text, 1, 'a', 'b');
-    ASSERT_TRUE(result == "");
+    std::string text = "steward01";
+    ASSERT_TRUE(function(text, 1, '1', '2') == "steward02");
 }
 
 int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
+    testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

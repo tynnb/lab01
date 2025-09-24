@@ -1,19 +1,18 @@
 #include <iostream>
-#include <string>
 #include "include/function.h"
 
 int main() {
     std::string text;
     int n;
-    char old_value;
-    char new_value;
+    char oldv;
+    char newv;
 
     std::getline(std::cin, text);
     std::cin >> n;
-    std::cin >> old_value;
-    std::cin >> new_value;
+    std::cin >> oldv;
+    std::cin >> newv;
 
-    std::cout << "result: " << function(text, n, old_value, new_value) << std::endl;
+    std::cout << "result: " << function(text, n, oldv, newv) << std::endl;
 
     return 0;
 }
